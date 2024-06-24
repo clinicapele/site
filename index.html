@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta name="Generator" content="Microsoft Excel 11">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header, footer {
+            background-color: #343a40;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        footer {
+            font-size: 14px;
+        }
+        iframe {
+            width: 100%;
+            height: calc(100vh - 140px); /* Adjust height based on header and footer size */
+            border: none;
+        }
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .dropdown button:hover {
+            background-color: #0056b3;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f8f9fa;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            right: 0;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .site-title {
+            font-size: 24px;
+        }
+    </style>
+    <script language="JavaScript">
+        var c_lTabs = 6;
+        var c_rgszSh = ["CAPA", "Médicos Recife (2)", "Eletro", "Cuidados", "Intervalos", "Contatos"];
+        var g_iShCur = 0;
 
+        function fnSetActiveSheet(iSh) {
+            document.getElementById('frSheet').src = "ENCICLOPELE_arquivos/sheet" + ("00" + (iSh + 1)).slice(-3) + ".htm";
+            g_iShCur = iSh;
+        }
+
+        function createDropdownMenu() {
+            var dropdownContent = document.getElementById('dropdown-content');
+
+            c_rgszSh.forEach(function(sheetName, index) {
+                var link = document.createElement('a');
+                link.innerText = sheetName;
+                link.href = "#";
+                link.onclick = function() {
+                    fnSetActiveSheet(index);
+                    return false;
+                };
+                dropdownContent.appendChild(link);
+            });
+        }
+    </script>
+</head>
+<body onload="fnSetActiveSheet(0); createDropdownMenu();">
+    <header>
+        <div class="menu">
+            <div class="site-title">Cabeçalho do Site</div>
+            <div class="dropdown">
+                <button>Menu</button>
+                <div id="dropdown-content" class="dropdown-content"></div>
+            </div>
+        </div>
+    </header>
+
+    <iframe id="frSheet" name="frSheet"></iframe>
+
+    <footer>
+        Rodapé do Site
+    </footer>
+</body>
+</html>
