@@ -192,3 +192,11 @@ footer p {
 .search-filter button:active {
     transform: scale(0.95);
 }
+
+hr {
+    width: 95%;
+    height: 2px;
+    border: 0px;
+    border-top: 1px solid #0e1f53;
+    background-color: #dddddd;
+}
