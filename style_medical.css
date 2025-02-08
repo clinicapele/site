@@ -1,0 +1,112 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #005f73;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Seção Principal */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+/* Estilo da seção que contém o botão */
+section {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center;     /* Centraliza o conteúdo verticalmente */
+    margin: 20px 0;          /* Adiciona um espaçamento */
+}
+
+/* Botão Voltar */
+.button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #005f73;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0a9396;
+}
+
+/* Estilo da Tabela */
+table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+    background-color: #005f73;
+    color: white;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #e7f0f2;
+}
+
+table tbody tr:hover {
+    background-color: #d9ebf2;
+}
+
+/* Rodapé */
+footer {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
