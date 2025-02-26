@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramais</title>
+    <link rel="stylesheet" href="style_ramal.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Central de Apoio - Ramais</h1>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <a href="index.html" class="button">Voltar para a Página Inicial</a>
+            <a href="ramais.html" class="button">Ramais Call-Center</a>
+        </section>
+
+        <section>
+            <input type="text" id="searchBar" placeholder="Buscar por nome do atendente..." oninput="filterTable()" style="width: 95%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
+        </section>
+
+        <section>
+            <h2>Lista de Ramais por Setor</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Setor</th>
+                        <th>Nome do Atendente</th>
+                        <th>Ramal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="sector-header">
+                        <td colspan="3">Comercial</td>
+                    </tr>
+                    <tr>
+                        <td>Comercial</td>
+                        <td>Gerente Eunice</td>
+                        <td>1008</td>
+                    </tr>
+                    <tr>
+                        <td>Comercial</td>
+                        <td>Gerente Mariana</td>
+                        <td>1010</td>
+                    </tr>
+                    <tr>
+                        <td>Comercial</td>
+                        <td>Rayssa</td>
+                        <td>1016</td>
+                    </tr>
+                    <tr>
+                        <td>Comercial</td>
+                        <td>Sup. Andreza</td>
+                        <td>1017</td>
+                    </tr>
+                    <tr>
+                        <td>Comercial</td>
+                        <td>Jomerson</td>
+                        <td>1044</td>
+                    </tr>
+
+                    <tr class="sector-header">
+                        <td colspan="3">Fisio's</td>
+                    </tr>
+                    <tr>
+                        <td>Fisio</td>
+                        <td>Gestão</td>
+                        <td>1002</td>
+                    </tr>
+                    <tr>
+                        <td>Fisio</td>
+                        <td>Superior</td>
+                        <td>1015</td>
+                    </tr>
+                    <tr>
+                        <td>Fisio</td>
+                        <td>Térreo</td>
+                        <td>1034</td>
+                    </tr>
+                    
+                    <tr class="sector-header">
+                        <td colspan="3">Recepção</td>
+                    </tr>
+                    <tr>
+                        <td>Recepção</td>
+                        <td>Superior 1</td>
+                        <td>1024</td>
+                    </tr>
+                    <tr>
+                        <td>Recepção</td>
+                        <td>Superior 2</td>
+                        <td>1025</td>
+                    </tr>
+
+                    <tr>
+                        <td>Recepção</td>
+                        <td>Superior 3</td>
+                        <td>1026</td>
+                    </tr>
+                    <tr>
+                        <td>Recepção</td>
+                        <td>Superior 4</td>
+                        <td>1030</td>
+                    </tr>
+                    <tr>
+                        <td>Recepção</td>
+                        <td>Térreo 1</td>
+                        <td>1021</td>
+                    </tr>
+                    <tr>
+                        <td>Recepção</td>
+                        <td>Térreo </td>
+                        <td>1022</td>
+                    </tr>
+
+                    <tr>
+                        <td>Recepção</td>
+                        <td>Térreo 3</td>
+                        <td>1023</td>
+                    </tr>
+                    
+                    <tr class="sector-header">
+                        <td colspan="3">Outros</td>
+                    </tr>
+                    <tr>
+                        <td>Outros</td>
+                        <td>Copa</td>
+                        <td>1036</td>
+                    </tr>
+                    <tr>
+                        <td>Outros</td>
+                        <td>Fotos</td>
+                        <td>1013</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; [2025] Antônio Ugiete. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function filterTable() {
+            const searchValue = document.getElementById('searchBar').value.toLowerCase();
+            const table = document.querySelector('table tbody');
+            const rows = table.getElementsByTagName('tr');
+
+            for (let row of rows) {
+                if (!row.classList.contains('sector-header')) {
+                    const nameCell = row.cells[1];
+                    if (nameCell) {
+                        const name = nameCell.textContent.toLowerCase();
+                        row.style.display = name.includes(searchValue) ? '' : 'none';
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
