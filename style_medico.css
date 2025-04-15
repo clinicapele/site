@@ -200,3 +200,13 @@ hr {
     border-top: 1px solid #0e1f53;
     background-color: #dddddd;
 }
+
+#observacao {
+    width: 75%;
+    height: 75%;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 2%;
+    background-color: #fde68a ;
+    color: #78350f   ;
+}

@@ -34,7 +34,13 @@
                 </select>
                 <button onclick="filterMedicos()">Filtrar</button>
             </div>
-            <br>
+
+            <div id="observacao">
+                Observação: Pacientes que possuem convênio que o médico não atende mas faz compras recorrentes, agendar como Agendamento Dermatológico e deixar o assistente ou supervisão ciente.
+                <br>Ex: Paciente da Dra Manuela é do convênio Amil, mas possui ou realiza Botox com a dra, colocar como agendamento dermatológico e não colocar observação de convênio
+
+            </div>
+
             <div id="medicosContainer">
                 <div class="main-content">
                     <div>
@@ -174,10 +180,10 @@
                         <h3>Turnos de Atendimento</h3>
                         <div class="schedule">
                             <div>Seg - Tarde</div>
-                            <div>Ter - Manhã</div>
-                            <div>Qua - Tarde</div>
+                            <div class="off">Ter - Sem atendimento</div>
+                            <div>Qua - Manhã/Tarde</div>
                             <div>Qui - Tarde</div>
-                            <div>Sex - Tarde</div>
+                            <div>Sex - Manhã/Tarde</div>
                             <div>Sab - Manhã(EXTRA)</div>
                         </div>
                     </div>
