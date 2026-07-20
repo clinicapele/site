@@ -32,7 +32,8 @@ const especialidadesList = [
     "Cardiologista",
     "Nutrólogo",
     "Ortopedista",
-    "Urologista"
+    "Urologista",
+    "Hepatologista"
 ];
 
 const filterSelect = document.getElementById('filterEspecialidade');
